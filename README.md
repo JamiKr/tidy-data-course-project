@@ -29,9 +29,13 @@ View(ts)
 
 The script should take care of downloading and unzipping [the source data files](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) for you.  What follows is the list of files that the script requires to be present on the drive once the files are downloaded and uncompressed by the script:
 
+`README.md` - This file
+
 `run_analysis.R` - This script converts the Human Activity Recognition Using Smartphones Dataset to a tidy dataset.
 
-`UCI HAR Dataset/features.txt` - This is a list of the variable names for the gyroscope and accelerometer outputs.  Our dataset corresponds to only the mean and standard deviation outputs of this dataset.  For more information on what these values mean, see my [Codebook](https://github.com/JamiKr/tidy-data-course-project/blob/master/Codebook.md) provided in this repository.
+`CodeBook.md` - A description of the transformations and tidy dataset codes
+
+`UCI HAR Dataset/features.txt` - This is a list of the variable names for the gyroscope and accelerometer outputs.  Our dataset corresponds to only the mean and standard deviation outputs of this dataset.  For more information on what these values mean, see my [CodeBook](https://github.com/JamiKr/tidy-data-course-project/blob/master/CodeBook.md) provided in this repository.
 
 `UCI HAR Dataset/test/X_test.txt` - Gyroscope and accelerometer data for the test dataset
 
