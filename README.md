@@ -2,7 +2,7 @@
 
 ## Summary
 
-The purpose of this script is to process the Human Activity Recognition Using Smartphones Dataset into a tidy dataset of means for 180 total groups, split by study participant and physical activity.  The original test and train datasets were merged, only the average and standard deviation columns were summarized, descriptive column names were applied, and physical activity codings were replaced with descriptive labels.
+The purpose of this script is to process the [Human Activity Recognition Using Smartphones Dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) into a tidy dataset of means for 180 total groups, split by study participant and physical activity.  The original test and train datasets were merged, only the average and standard deviation columns were summarized, descriptive column names were applied, and physical activity codings were replaced with descriptive labels.
 
 The original dataset was split into multiple files: The participant id's (which I call `person`), the activities they are doing at the time of data acquisition (`physicalActivity`), and the processed mean and standard deviation accelerometer and gyroscope data (`tBodyAcc-XYZ`, `tGravityAcc-XYZ`, `tBodyAccJerk-XYZ`, etc) for both test and train datasets were merged into one single dataframe.  Then, means were calculated for each combination of person and physicalActivity.
 
