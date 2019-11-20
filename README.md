@@ -20,8 +20,10 @@ The script will download the Human Activity Recognition Using Smartphones Datase
 
 You need not run the script to view the results.  I have saved a copy of the final tidy dataset in `tidy-smartphone-data-result.txt`, so you can view the results with:
 
-> ts <- read.table("tidy-smartphone-data-result.txt", header = TRUE)
-> View(ts)
+```
+ts <- read.table("tidy-smartphone-data-result.txt", header = TRUE)
+View(ts)
+```
 
 ## The Files
 
@@ -29,7 +31,7 @@ The script should take care of downloading and unzipping [the source data files]
 
 `run_analysis.R` - This script converts the Human Activity Recognition Using Smartphones Dataset to a tidy dataset.
 
-`UCI HAR Dataset/features.txt` - This is a list of the variable names for the gyroscope and accelerometer outputs.  Our dataset corresponds to only the mean and standard deviation outputs of this dataset.  For more information on what these values mean, see my [Codebook](http://) provided in this repository.
+`UCI HAR Dataset/features.txt` - This is a list of the variable names for the gyroscope and accelerometer outputs.  Our dataset corresponds to only the mean and standard deviation outputs of this dataset.  For more information on what these values mean, see my [Codebook](https://github.com/JamiKr/tidy-data-course-project/blob/master/Codebook.md) provided in this repository.
 
 `UCI HAR Dataset/test/X_test.txt` - Gyroscope and accelerometer data for the test dataset
 
