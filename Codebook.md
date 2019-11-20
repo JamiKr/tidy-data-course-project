@@ -15,6 +15,29 @@ It is important to understand that the data used in our script was derived from 
 > 
 > These signals were used to estimate variables of the feature vector for each pattern: '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
+## Transformations
+
+The `run_analysis.R` script performs a number of transformations on the original Human Activity Recognition Using Smartphones Dataset.  I first extract the desired mean and standard deviation columns from the original 561 columns - basically any column name that matches `grepl` on:
+
+> "^.*-(mean|std)\\(\\)-[XYZ]$"
+
+The script sets up a dataGroup column to track the origin of each measurement - either `TEST` or `TRAIN` - but this proved to not be necessary for the final data table.
+
+The person and activity datasets are merged with the selected measurement data.  The physical activity codes were replaced with descriptive labels.  The test and train datasets were row-bound to form one single dataset, and the column names for this improved table were made to be more descriptive.  Columns were reordered so that the group columns - `person` and `physicalActivity` - appeared first.
+
+Then, from that reduced dataset, a tidy dataset was generated using the `ddply` command.  `ddply` splits the data frame, applies a function and returns the results in a new data frame.  The second argument supplied to `ddply` is the vector string of variables to split the data frame by.  Since we are applying a `mean` to all of this grouped column data, we must first make sure that we are not applying the `mean` function to our group columns, `person` and `physicalActivity`.  So, we first apply a subset before we apply the `mean` function.  The second argument to apply is the `margin`, which indicates either row (1) or column (2).
+
+```
+final <- ddply(improved, c("person", "physicalActivity"),
+               function(x) {
+                   y <- subset(x, select = -c(person, physicalActivity))
+                   apply(y, 2, mean)
+               }
+         )
+```
+
+The final result is then written to disk as `tidy-smartphone-data.txt`.
+
 ## The Tidy Codes
 
 Important: Each datapoint in our tidy dataset is produced by averaging groups of mean and standard deviation data which correspond to participant and physical activity.
