@@ -49,6 +49,7 @@ There are 30 partipants and 6 physical activities, which produces a total of 180
 ### Group Variables
 
 `person` - participant identification number (1 - 30)
+
 `physicalActivity` - participant activity; one of `WALKING`, `WALKING_UPSTAIRS`, `WALKING_DOWNSTAIRS`, `SITTING`, `STANDING`, or `LAYING`
 
 ### Time Domain Signals
