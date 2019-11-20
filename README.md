@@ -35,6 +35,8 @@ The script should take care of downloading and unzipping [the source data files]
 
 `CodeBook.md` - A description of the transformations and tidy dataset codes
 
+`tidy-smartphone-data-result.txt` - This is the output of the `run_analysis.R` script.  When run, the script should generate an identical version with a slightly different name, `tidy-smartphone-data.txt`.
+
 `UCI HAR Dataset/features.txt` - This is a list of the variable names for the gyroscope and accelerometer outputs.  Our dataset corresponds to only the mean and standard deviation outputs of this dataset.  For more information on what these values mean, see my [CodeBook](https://github.com/JamiKr/tidy-data-course-project/blob/master/CodeBook.md) provided in this repository.
 
 `UCI HAR Dataset/test/X_test.txt` - Gyroscope and accelerometer data for the test dataset
